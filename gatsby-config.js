@@ -1,14 +1,15 @@
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Starter Blog`,
+    title: `buildnote`,
     author: {
-      name: `Kyle Mathews`,
-      summary: `who lives and works in San Francisco building useful things.`,
+      name: `yoshiba`,
     },
-    description: `A starter blog demonstrating what Gatsby can do.`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`,
+    description: `日々の学びをアウトプットするためのブログです`,
+    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`, // TODO: 実際のURLに変更する
+    lang: 'ja',
     social: {
-      twitter: `kylemathews`,
+      twitter: `yoshiba718`,
+      github: 'yosh1ba',
     },
   },
   plugins: [
