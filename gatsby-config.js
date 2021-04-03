@@ -5,7 +5,7 @@ module.exports = {
       name: `yoshiba`,
     },
     description: `日々の学びをアウトプットするためのブログです`,
-    siteUrl: `https://gatsbystarterblogsource.gatsbyjs.io/`, // TODO: 実際のURLに変更する
+    siteUrl: `https://buildnote.yosh1ba.com/`,
     lang: 'ja',
     social: {
       twitter: `yoshiba718`,
