@@ -1,15 +1,11 @@
 import Typography from 'typography'
 import theme from 'typography-theme-github' // テーマのインポート
 
-theme.headerFontFamily = ['Noto Sans JP', 'Roboto', 'serif']
-theme.bodyFontFamily = ['Noto Sans JP', 'Roboto', 'serif']
+theme.headerFontFamily = ['Noto Sans JP', 'sans-serif']
+theme.bodyFontFamily = ['Noto Sans JP', 'sans-serif']
 theme.googleFonts = [
   {
     name: 'Noto Sans JP',
-    styles: ['400'],
-  },
-  {
-    name: 'Roboto',
     styles: ['400'],
   }
 ]
