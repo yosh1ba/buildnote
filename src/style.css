@@ -297,9 +297,15 @@ a:focus {
 
 .bio-avatar {
   margin-right: var(--spacing-4);
-  margin-bottom: var(--spacing-0);
+  margin-bottom: var(--spacing-2);
   min-width: 100px;
   border-radius: 100%;
+}
+
+.bio-name {
+  width: 100px;
+  text-align: center;
+
 }
 
 .blog-post header h1 {
