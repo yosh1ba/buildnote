@@ -125,6 +125,7 @@ h1 {
 
 h2 {
   font-size: var(--fontSize-5);
+  border: none;
 }
 
 h3 {
