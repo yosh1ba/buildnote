@@ -1,0 +1,23 @@
+.tags {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.link {
+  text-decoration: none;
+}
+
+.tag {
+  border-radius: 4px;
+  padding: var(--spacing-1) var(--spacing-2);
+  margin-right: var(--spacing-2);
+  margin-bottom: var(--spacing-2);
+  background-color: var(--color-accent);
+  color: var(--color-text);
+  transition: .3s;
+  &:hover{
+    background-color: #eeeeee;
+    transition: .3s;
+  }
+}

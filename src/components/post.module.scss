@@ -9,6 +9,17 @@
   }
 }
 
+.link {
+  display: flex;
+}
+
+.thumbnail{
+  width: 120px;
+  height: 120px;
+  background-color: blanchedalmond;
+  margin-right: var(--spacing-4);
+}
+
 .titleStyle {
   margin-top:0;
   margin-bottom:var(--spacing-2);
@@ -17,4 +28,14 @@
 .date {
   color: var(--color-text);
   margin-bottom:var(--spacing-2);
+}
+
+@media (max-width: 42rem) {
+  h3 {
+    font-size: var(--fontSize-2);
+  }
+  .thumbnail{
+    width: 40px;
+    height: 40px;
+  }
 }
