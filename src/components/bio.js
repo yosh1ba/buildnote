@@ -53,9 +53,6 @@ const Bio = () => {
           <p>
             医療機関向けシステムのエンジニアをしています。
             フロントエンドが好きで、最近はJamstackに夢中です。
-            {/* <a href={`https://twitter.com/${social?.twitter || ``}`}>
-              フォローお待ちしています。
-            </a> */}
             <SNS social={social} />
           </p>
         </div>
