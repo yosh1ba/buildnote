@@ -125,12 +125,12 @@ module.exports = {
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-gatsby-cloud`,
     // 2021-04-01 typography導入
-    {
+/*     {
       resolve: `gatsby-plugin-typography`,
       options: {
         pathToConfigModule: 'src/utils/typography',
       },
-    },
+    }, */
     `gatsby-plugin-sass`,
     // this (optional) plugin enables Progressive Web App + Offline functionality
     // To learn more, visit: https://gatsby.dev/offline
