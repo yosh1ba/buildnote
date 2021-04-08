@@ -4,6 +4,7 @@ import { Link, graphql } from "gatsby"
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
+import Tags from "../components/tags"
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
@@ -24,6 +25,10 @@ const BlogPostTemplate = ({ data, location }) => {
         <header>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           <p>{post.frontmatter.date}</p>
+          <Tags tags={post.frontmatter.tags} /> {/* aaa */}
+          {/* TODO:カテゴリはアイキャッチで判別する予定のため今は表示しない
+          <p>{post.frontmatter.category}</p>
+           */}
         </header>
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
@@ -83,8 +88,10 @@ export const pageQuery = graphql`
       html
       frontmatter {
         title
-        date(formatString: "MMMM DD, YYYY")
+        date(formatString: "YYYY-MM-DD")
         description
+        tags
+        category
       }
     }
     previous: markdownRemark(id: { eq: $previousPostId }) {
