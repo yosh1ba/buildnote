@@ -1,6 +1,10 @@
 import * as React from "react"
 import { Link } from "gatsby"
 
+import "@fortawesome/fontawesome-svg-core/styles.css"
+import {config} from "@fortawesome/fontawesome-svg-core"
+config.autoAddCss = false
+
 const Layout = ({ location, title, children }) => {
   const rootPath = `${__PATH_PREFIX__}/`
   const isRootPath = location.pathname === rootPath
