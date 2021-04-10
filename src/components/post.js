@@ -1,7 +1,7 @@
 import * as React from "react"
 import {Link} from "gatsby"
 import * as styles from "./post.module.scss"
-import Tags from "./tags"
+import TagsList from "./tagsList"
 
 const Post = ({slug, title, date, tags}) => {
   return (
@@ -17,7 +17,7 @@ const Post = ({slug, title, date, tags}) => {
         <div>
           <h3 itemProp="headline" className={styles.titleStyle}>{title}</h3>
           <p className={styles.date}>{date}</p>
-          <Tags tags={tags} />
+          <TagsList tags={tags} />
         </div>
       </Link>
     </div>
