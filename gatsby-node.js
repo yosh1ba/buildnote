@@ -37,8 +37,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       }
     `
   )
-// TODO: 名前で分ける必要あり？このまま取得すると、タグを抽出して重複を取り除いたりしないといけなさそう
-// TODO: 今のallMarkdownRemarkを置換しないといけなさそう？
+
   if (result.errors) {
     reporter.panicOnBuild(
       `There was an error loading your blog posts`,
