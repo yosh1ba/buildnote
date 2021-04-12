@@ -31,6 +31,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         tagsGroup: allMarkdownRemark(limit: 1000) {
           group(field: frontmatter___tags) {
             fieldValue
+            totalCount
           }
         }
       }
@@ -78,6 +79,7 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
         component: tagTemplate,
         context: {
           tag: tag.fieldValue,
+          count: tag.totalCount
         },
       })
     })

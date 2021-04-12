@@ -10,13 +10,16 @@ const Tags = ({data, location, pageContext}) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
 
-  // pageContextオブジェクト内のtagを変数に格納する
-  const tag = pageContext.tag
-  
+  // pageContextオブジェクトを変数に格納する
+  const tag = pageContext.tag // タグ名
+  const count = pageContext.count  // タグが設定された記事数
+
+
   return (
     <Layout location={location} title={siteTitle}>
       <SEO title={`「${tag}」タグが設定された記事一覧ページ`}  />
       <Bio />
+      <h4>{tag}({count})</h4>
       <div>
         {posts.map(post => {
           const title = post.frontmatter.title || post.fields.slug
