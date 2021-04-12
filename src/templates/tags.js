@@ -6,13 +6,16 @@ import Layout from "../components/layout"
 import SEO from "../components/seo"
 import Post from "../components/post"
 
-const Tags = ({data, location}) => {
+const Tags = ({data, location, pageContext}) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
 
+  // pageContextオブジェクト内のtagを変数に格納する
+  const tag = pageContext.tag
+  
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title="All posts" />
+      <SEO title={`「${tag}」タグが設定された記事一覧ページ`}  />
       <Bio />
       <div>
         {posts.map(post => {
