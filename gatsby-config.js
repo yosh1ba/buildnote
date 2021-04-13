@@ -7,6 +7,7 @@ module.exports = {
     description: `日々の学びのアウトプット`,
     siteUrl: `https://buildnote.yosh1ba.com/`,
     lang: 'ja', // TODO: これであってる？
+    locale: 'ja_JP',
     social: {
       twitter: `yoshiba718`,
       github: 'yosh1ba',

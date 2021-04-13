@@ -19,6 +19,7 @@ const SEO = ({ description, lang, meta, title }) => {
             title
             description
             siteUrl
+            locale
             social {
               twitter
             }
@@ -31,6 +32,7 @@ const SEO = ({ description, lang, meta, title }) => {
   const metaDescription = description || site.siteMetadata.description
   const defaultTitle = site.siteMetadata?.title
   const metaURL = site.siteMetadata.siteUrl
+  const metaLocale = site.siteMetadata.locale
 
   return (
     <Helmet
@@ -59,6 +61,10 @@ const SEO = ({ description, lang, meta, title }) => {
         {
           property: `og:image`,
           content: `${metaURL}/images/ogp.png`,
+        },
+        {
+          property: `og:locale`,
+          content: metaLocale,
         },
         {
           name: `twitter:card`,
