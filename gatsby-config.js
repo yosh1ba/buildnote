@@ -1,12 +1,12 @@
 module.exports = {
   siteMetadata: {
-    title: `buildnote`,
+    title: `buildnote_`,
     author: {
       name: `yoshiba`,
     },
-    description: `日々の学びをアウトプットするためのブログです`,
+    description: `日々の学びのアウトプット`,
     siteUrl: `https://buildnote.yosh1ba.com/`,
-    lang: 'ja',
+    lang: 'ja', // TODO: これであってる？
     social: {
       twitter: `yoshiba718`,
       github: 'yosh1ba',
