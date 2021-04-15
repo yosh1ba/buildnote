@@ -8,7 +8,7 @@ export default props => {
     query{
       allImageSharp {
         nodes {
-          fluid {
+          fluid(maxWidth: 60) {
             originalName
             ...GatsbyImageSharpFluid_withWebp
           }
@@ -24,7 +24,6 @@ export default props => {
             .fluid
         }
         alt={props.alt}
-        style={props.style}
       />
   )
 }
