@@ -8,7 +8,7 @@ export default props => {
     query{
       allImageSharp {
         nodes {
-          fluid(maxWidth: 1600) {
+          fluid {
             originalName
             ...GatsbyImageSharpFluid_withWebp
           }
@@ -18,7 +18,6 @@ export default props => {
   `)
 
   return (
-    <figure>
       <Img
         fluid={
           allImageSharp.nodes.find(n => n.fluid.originalName === props.filename)
@@ -27,6 +26,5 @@ export default props => {
         alt={props.alt}
         style={props.style}
       />
-    </figure>
   )
 }

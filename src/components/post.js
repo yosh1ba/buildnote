@@ -10,10 +10,10 @@ const Post = ({slug, title, date, tags}) => {
       <Link to={slug} className={styles.link} itemProp="url">
         <div className={styles.thumbnail}>
           <span className={styles.thumbnailIcon}>
-            <Image filename="dev.png" />
+          <Image filename="dev.png" />
           </span>
         </div>
-     
+        
         <div>
           <h3 itemProp="headline" className={styles.titleStyle}>{title}</h3>
           <p className={styles.date}>{date}</p>
