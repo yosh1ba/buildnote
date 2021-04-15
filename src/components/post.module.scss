@@ -1,9 +1,14 @@
+img {
+  object-fit: fill;
+  width: 100%;
+}
+
 .wrapper {
   border-top: 1px solid #EDEDED;
   padding: var(--spacing-4) var(--spacing-0);
   transition: .3s;
   &:hover{
-    background-color: #eee;
+    background-color: var(--color-background-thin);
     transition: .3s;
     cursor: pointer;
   }
@@ -16,8 +21,15 @@
 .thumbnail{
   width: 120px;
   height: 120px;
-  background-color: blanchedalmond;
+  background-color: var(--color-background-thin);
   margin-right: var(--spacing-4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.thumbnailIcon{
+  width: 50%;
 }
 
 .titleStyle {

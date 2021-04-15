@@ -62,6 +62,7 @@
   --color-accent: #ffcb7f;
   --color-twitter: #3eaded;
   --color-github: #333;
+  --color-background-thin:#f0f0f0;
 }
 
 /* HTML elements */
@@ -83,6 +84,7 @@ body {
   font-family: var(--font-body);
   font-size: var(--fontSize-1);
   color: var(--color-text);
+  background-color: #fafafa;
 }
 
 footer {
