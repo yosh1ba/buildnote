@@ -10,7 +10,8 @@ const Post = ({slug, title, date, tags}) => {
       <Link to={slug} className={styles.link} itemProp="url">
         <div className={styles.thumbnail}>
           <div className={styles.thumbnailIcon}>
-            <Image filename="dev.png" />
+            <Image filename="dev.png" 
+              style={{width: "60px"}} />
           </div>
 
         </div>
