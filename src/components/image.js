@@ -10,7 +10,7 @@ export default props => {
         nodes {
           fluid(maxWidth:60) {
             originalName
-            ...GatsbyImageSharpFluid
+            ...GatsbyImageSharpFluid_withWebp
           }
         }
       }
@@ -24,6 +24,7 @@ export default props => {
             .fluid
         }
         alt={props.alt}
+        style={props.style}
       />
   )
 }

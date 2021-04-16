@@ -1,7 +1,7 @@
-// img {
-//   object-fit: fill;
-//   width: 100%;
-// }
+img {
+  object-fit: fill;
+  width: 100%;
+}
 
 .wrapper {
   border-top: 1px solid #EDEDED;
@@ -23,13 +23,14 @@
   height: 120px;
   background-color: var(--color-background-thin);
   margin-right: var(--spacing-4);
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .thumbnailIcon{
+  position: relative;
   width: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 .titleStyle {

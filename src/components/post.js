@@ -9,9 +9,10 @@ const Post = ({slug, title, date, tags}) => {
     <div key={slug} className={styles.wrapper}>
       <Link to={slug} className={styles.link} itemProp="url">
         <div className={styles.thumbnail}>
-          <span className={styles.thumbnailIcon}>
-          <Image filename="dev.png" />
-          </span>
+          <div className={styles.thumbnailIcon}>
+            <Image filename="dev.png" />
+          </div>
+
         </div>
         
         <div>
