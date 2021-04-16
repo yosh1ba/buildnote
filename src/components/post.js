@@ -3,6 +3,7 @@ import {Link} from "gatsby"
 import * as styles from "./post.module.scss"
 import TagsList from "./tagsList"
 import Image from "./image"
+import { StaticImage } from "gatsby-plugin-image"
 
 const Post = ({slug, title, date, tags}) => {
   return (
@@ -10,8 +11,11 @@ const Post = ({slug, title, date, tags}) => {
       <Link to={slug} className={styles.link} itemProp="url">
         <div className={styles.thumbnail}>
           <div className={styles.thumbnailIcon}>
-            <Image filename="dev.png" 
-              style={{width: "60px"}} />
+            {/* <Image filename="dev.png" 
+              style={{width: "60px"}} /> */}
+              <StaticImage src="../images/dev.png"
+              placeholder="blurred"
+              />
           </div>
 
         </div>
