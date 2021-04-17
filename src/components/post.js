@@ -14,7 +14,11 @@ const Post = ({slug, title, date, tags}) => {
             {/* <Image filename="dev.png" 
               style={{width: "60px"}} /> */}
               <StaticImage src="../images/dev.png"
-              placeholder="blurred"
+                layout="constrained"
+                formats={["AUTO", "WEBP", "AVIF"]}
+                width={60}
+                height={60}
+                quality={95}
               />
           </div>
 
