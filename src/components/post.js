@@ -14,7 +14,7 @@ const Post = ({slug, title, date, tags}) => {
             {/* <Image filename="dev.png" 
               style={{width: "60px"}} /> */}
               <StaticImage
-                className="icom-image"
+                className="icon-image"
                 src="../images/dev.png"
                 layout="fixed"
                 formats={["AUTO", "WEBP", "AVIF"]}
