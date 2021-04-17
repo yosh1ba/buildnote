@@ -13,8 +13,10 @@ const Post = ({slug, title, date, tags}) => {
           <div className={styles.thumbnailIcon}>
             {/* <Image filename="dev.png" 
               style={{width: "60px"}} /> */}
-              <StaticImage src="../images/dev.png"
-                layout="constrained"
+              <StaticImage
+                className="icom-image"
+                src="../images/dev.png"
+                layout="fixed"
                 formats={["AUTO", "WEBP", "AVIF"]}
                 width={60}
                 height={60}
