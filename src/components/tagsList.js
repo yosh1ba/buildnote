@@ -14,13 +14,11 @@ const Tag = ({ tag }) => (
 );
 
 const Tagslist = ({ tags }) => (
-  <div>
   <ul className={Styles.tags}>
     {(tags || []).map(tag => (
       <Tag key={tag} tag={tag} />
     ))}
   </ul>
-  </div>
 
 );
 
