@@ -6,19 +6,22 @@ import * as Styles from './tagsList.module.scss';
 
 const Tag = ({ tag }) => (
 
-    <li className={Styles.tag}>
+    // <li className={Styles.tag}>
       <Link className={Styles.link} to={`/tags/${kebabCase(tag)}/`}>
       {tag}
       </Link>
-    </li>
+    // </li>
 );
 
 const Tagslist = ({ tags }) => (
-  <ul className={Styles.tags}>
+  <div>
     {(tags || []).map(tag => (
       <Tag key={tag} tag={tag} />
     ))}
-  </ul>
+  </div>
+  // <ul className={Styles.tags}>
+    
+  // </ul>
 
 );
 
