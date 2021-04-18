@@ -7,10 +7,7 @@ import TagsList from "./tagsList"
 
 const Post = ({slug, title, date, tags}) => {
   return (
-    <div>
-
-    <a href="" className={styles.link}>
-    {/* <Link to={slug} className={styles.link} itemProp="url"> */}
+    <Link to={slug} className={styles.link} itemProp="url">
     <div key={slug} className={styles.wrapper} style={{display: "flex"}}>
       
         <div className={styles.thumbnail}>
@@ -29,10 +26,7 @@ const Post = ({slug, title, date, tags}) => {
         </article>
       
     </div>
-    {/* </Link> */}
-    </a>
-
-    </div>
+    </Link>
   )
 }
 
