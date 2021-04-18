@@ -16,11 +16,7 @@ const Post = ({slug, title, date, tags}) => {
               <StaticImage
                 className="icon-image"
                 src="../images/dev.png"
-                layout="fixed"
-                formats={["AUTO", "WEBP", "AVIF"]}
-                width={60}
-                height={60}
-                quality={95}
+                placeholder="blurred"
               />
           </div>
 
