@@ -10,7 +10,6 @@ const Post = ({slug, title, date, tags}) => {
     <div key={slug} className={styles.wrapper}>
       <Link to={slug} className={styles.link} itemProp="url">
         <div className={styles.thumbnail}>
-          <div className={styles.thumbnailIcon}>
             {/* <Image filename="dev.png" 
               style={{width: "60px"}} /> */}
               <StaticImage
@@ -18,10 +17,7 @@ const Post = ({slug, title, date, tags}) => {
                 src="../images/dev.png"
                 placeholder="blurred"
               />
-          </div>
-
         </div>
-        
         <div>
           <h3 itemProp="headline" className={styles.titleStyle}>{title}</h3>
           <p className={styles.date}>{date}</p>
