@@ -18,8 +18,9 @@ const Post = ({slug, title, date, tags}) => {
                 placeholder="blurred"
               />
         </div>
+        <h3 itemProp="headline" className={styles.titleStyle}>{title}</h3>
         <div>
-          <h3 itemProp="headline" className={styles.titleStyle}>{title}</h3>
+          
           <p className={styles.date}>{date}</p>
           <TagsList tags={tags} />
         </div>
