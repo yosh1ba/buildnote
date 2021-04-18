@@ -7,9 +7,9 @@ import * as Styles from './tagsList.module.scss';
 const Tag = ({ tag }) => (
 
     <li className={Styles.tag}>
-      <Link className={Styles.link} to={`/tags/${kebabCase(tag)}/`}>
+      {/* <Link className={Styles.link} to={`/tags/${kebabCase(tag)}/`}> */}
       {tag}
-      </Link>
+      {/* </Link> */}
     </li>
 );
 
