@@ -4,6 +4,7 @@ import * as styles from "./post.module.scss"
 import { StaticImage } from "gatsby-plugin-image"
 import TagsList from "./tagsList"
 
+
 const Post = ({slug, title, date, tags}) => {
   return (
     <div key={slug} className={styles.wrapper}>
@@ -20,13 +21,11 @@ const Post = ({slug, title, date, tags}) => {
         <article>
           <h3 itemProp="headline" className={styles.titleStyle}>{title}</h3>
           <p className={styles.date}>{date}</p>
-          <p>
-          <div>
-          <a href="/" style={{display: "block"}}>aaa</a>
+          <div className={styles.icons}>
+            <a href={`https://twitter.com/yoshiba718`} itemProp="url" target="blank">
+              aaa
+            </a>
           </div>
-          </p>
-
-          
           {/* <TagsList tags={tags} /> */}
         </article>
       </Link>
