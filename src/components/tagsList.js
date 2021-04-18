@@ -6,9 +6,9 @@ import * as Styles from './tagsList.module.scss';
 import { divide } from 'lodash-es';
 
 const Tag = ({ tag }) => (
-  <Link className={Styles.link} to={`/tags/${kebabCase(tag)}/`}>
+  // <Link className={Styles.link} to={`/tags/${kebabCase(tag)}/`}>
     <li className={Styles.tag}>{tag}</li>
-  </Link>
+  // </Link>
 );
 
 const Tagslist = ({ tags }) => (
