@@ -38,6 +38,7 @@ const BlogIndex = ({ data, location }) => {
               title={title}
               date={post.frontmatter.date}
               tags={post.frontmatter.tags}
+              category={post.frontmatter.category}
             />
           )
         })}
@@ -66,6 +67,7 @@ export const pageQuery = graphql`
           title
           description
           tags
+          category
         }
       }
     }

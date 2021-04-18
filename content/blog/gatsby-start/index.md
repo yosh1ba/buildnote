@@ -3,7 +3,7 @@ title: "GatsbyJSでブログを作った"
 date: "2021-04-09 07:53:46"
 description: "GatsbyJSでブログを作った"
 tags: ['#GatsbyJS']
-category: "Dev"
+category: "dev"
 ---
 
 ## はじめた理由
