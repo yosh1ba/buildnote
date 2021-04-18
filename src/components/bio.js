@@ -44,6 +44,7 @@ const Bio = () => {
           width={100}
           height={100}
           quality={95}
+          placeholder="blurred"
           alt="Profile picture"
         />
         <p className="bio-name">{author.name}</p>

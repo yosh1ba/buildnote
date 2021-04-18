@@ -12,9 +12,10 @@ const Post = ({slug, title, date, tags}) => {
         <div className={styles.eyecatch}>
           <div className={styles.eyecatchIcon}>
             <StaticImage
-              className="icon-image"
               src="../images/dev.png"
               placeholder="blurred"
+              alt="アイキャッチ"
+              formats={["AUTO", "WEBP", "AVIF"]}
             />
           </div>
         </div>
