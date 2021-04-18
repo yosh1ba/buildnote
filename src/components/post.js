@@ -17,11 +17,12 @@ const Post = ({slug, title, date, tags}) => {
                 placeholder="blurred"
               />
         </div>
-        <TagsList tags={tags} />
-        {/* <article>
+        <article>
           <h3 itemProp="headline" className={styles.titleStyle}>{title}</h3>
           <p className={styles.date}>{date}</p>
-        </article> */}
+          <p className={styles.date}>{date}</p>
+          {/* <TagsList tags={tags} /> */}
+        </article>
       </Link>
     </div>
   )
