@@ -20,7 +20,8 @@ const Post = ({slug, title, date, tags}) => {
         <article>
           <h3 itemProp="headline" className={styles.titleStyle}>{title}</h3>
           <p className={styles.date}>{date}</p>
-          <TagsList tags={tags} />
+          <a href="/">aaa</a>
+          {/* <TagsList tags={tags} /> */}
         </article>
       </Link>
     </div>
