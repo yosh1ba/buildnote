@@ -7,6 +7,7 @@ img {
   border-top: 1px solid #EDEDED;
   padding: var(--spacing-4) var(--spacing-0);
   transition: .3s;
+  display: flex;
   &:hover{
     background-color: var(--color-background-thin);
     transition: .3s;
@@ -14,18 +15,15 @@ img {
   }
 }
 
-.link {
-  // display: flex;
-}
 
-.thumbnail{
+.eyecatch{
   width: 120px;
   height: 120px;
   background-color: var(--color-background-thin);
   margin-right: var(--spacing-4);
 }
 
-.thumbnailIcon{
+.eyecatchIcon{
   position: relative;
   width: 50%;
   top: 50%;
@@ -48,7 +46,7 @@ img {
   h3 {
     font-size: var(--fontSize-2);
   }
-  .thumbnail{
+  .eyecatch{
     width: 40px;
     height: 40px;
   }

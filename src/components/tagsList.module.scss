@@ -10,6 +10,10 @@
   display: block;
 }
 
+.linkText {
+  color: var(--color-text);
+}
+
 .tag {
   border-radius: 4px;
   padding: var(--spacing-1) var(--spacing-2);

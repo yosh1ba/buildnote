@@ -7,25 +7,23 @@ import TagsList from "./tagsList"
 
 const Post = ({slug, title, date, tags}) => {
   return (
-    <Link to={slug} className={styles.link} itemProp="url">
-    <div key={slug} className={styles.wrapper} style={{display: "flex"}}>
-      
-        <div className={styles.thumbnail}>
-            {/* <Image filename="dev.png" 
-              style={{width: "60px"}} /> */}
-              <StaticImage
-                className="icon-image"
-                src="../images/dev.png"
-                placeholder="blurred"
-              />
+    <Link to={slug} itemProp="url">
+      <div key={slug} className={styles.wrapper} style={{display: "flex"}}>
+        <div className={styles.eyecatch}>
+          <div className={styles.eyecatchIcon}>
+            <StaticImage
+              className="icon-image"
+              src="../images/dev.png"
+              placeholder="blurred"
+            />
+          </div>
         </div>
-        <article>
+        <div>
           <h3 itemProp="headline" className={styles.titleStyle}>{title}</h3>
           <p className={styles.date}>{date}</p>
           <TagsList tags={tags} />
-        </article>
-      
-    </div>
+        </div>
+      </div>
     </Link>
   )
 }

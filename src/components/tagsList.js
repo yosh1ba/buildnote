@@ -5,10 +5,9 @@ import kebabCase from 'lodash/kebabCase';
 import * as Styles from './tagsList.module.scss';
 
 const Tag = ({ tag }) => (
-
     <li className={Styles.tag}>
       <Link className={Styles.link} to={`/tags/${kebabCase(tag)}/`}>
-      <span>{tag}</span>
+      <span className={Styles.linkText}>{tag}</span>
       </Link>
     </li>
 );
