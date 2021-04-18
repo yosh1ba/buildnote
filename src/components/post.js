@@ -19,14 +19,9 @@ const Post = ({slug, title, date, tags}) => {
               />
         </div>
         <article>
-          <h3 itemProp="headline" className={styles.titleStyle}>{title}</h3>
-          <p className={styles.date}>{date}</p>
-          <div className={styles.icons}>
-            <a href={`https://twitter.com/yoshiba718`} itemProp="url" target="blank">
-              aaa
-            </a>
-          </div>
-          {/* <TagsList tags={tags} /> */}
+          {/* <h3 itemProp="headline" className={styles.titleStyle}>{title}</h3>
+          <p className={styles.date}>{date}</p> */}
+          <TagsList tags={tags} />
         </article>
       </Link>
     </div>
