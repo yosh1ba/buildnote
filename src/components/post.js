@@ -1,21 +1,31 @@
 import * as React from "react"
-import {Link} from "gatsby"
+import {Link, graphql, useStaticQuery} from "gatsby"
 import * as styles from "./post.module.scss"
-import { StaticImage } from "gatsby-plugin-image"
+import { GatsbyImage } from "gatsby-plugin-image"
 import TagsList from "./tagsList"
 
-
+// TODO: GatsbyImageはgraphqlを使う必要あり？
 const Post = ({slug, title, date, tags, category}) => {
 
-  const categoryImage = `../images/${category}.png`
+  const data = useStaticQuery(graphql`
+    query CategoryIcon {
+      file(name: {eq: "dev"}, extension: {eq: "png"}) {
+        childImageSharp {
+          gatsbyImageData
+        }
+      }
+    }
+  `)
+
+  console.log(data)
 
   return (
     <Link to={slug} itemProp="url">
       <div key={slug} className={styles.wrapper}>
         <div className={styles.eyecatch}>
           <div className={styles.eyecatchIcon}>
-            <StaticImage
-              src={categoryImage}
+            <GatsbyImage
+              src=""
               placeholder="blurred"
               alt="アイキャッチ"
               formats={["AUTO", "WEBP", "AVIF"]}
