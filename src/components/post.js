@@ -4,7 +4,6 @@ import * as styles from "./post.module.scss"
 import { GatsbyImage, getImage } from "gatsby-plugin-image"
 import TagsList from "./tagsList"
 
-// TODO: GatsbyImageはgraphqlを使う必要あり？
 const Post = ({slug, title, date, tags, category}) => {
 
   const data = useStaticQuery(graphql`
@@ -25,7 +24,7 @@ const Post = ({slug, title, date, tags, category}) => {
     }  
   `)
 
-  const image = getImage(data.allFile.nodes.find(n => n.name === "dev")
+  const image = getImage(data.allFile.nodes.find(n => n.name === category)
     .childrenImageSharp[0])
 
 
@@ -37,7 +36,7 @@ const Post = ({slug, title, date, tags, category}) => {
           <div className={styles.eyecatchIcon}>
             <GatsbyImage
               image={image}
-              alt="アイキャッチ画像"
+              alt="アイキャッチアイコン"
               />
           </div>
         </div>
