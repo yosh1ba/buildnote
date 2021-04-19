@@ -1,10 +1,13 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
+import { StaticImage } from "gatsby-plugin-image"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
 import SEO from "../components/seo"
 import TagsList from "../components/tagsList"
+
+import * as styles from "./blog-post.module.scss"
 
 const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
@@ -23,6 +26,9 @@ const BlogPostTemplate = ({ data, location }) => {
         itemType="http://schema.org/Article"
       >
         <header>
+          <div className={styles.eyecatch_wrapper}>
+          <StaticImage src="../images/eyecatch/dev.png" />
+          </div>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           <p>{post.frontmatter.date}</p>
           <TagsList tags={post.frontmatter.tags} /> {/* aaa */}
