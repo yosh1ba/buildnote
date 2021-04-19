@@ -23,7 +23,9 @@ const Post = ({slug, title, date, tags, category}) => {
     }  
   `)
 
-  const image = getImage(data.allFile.nodes.find( (n) => n.name === category).childrenImageSharp[0])
+  const categoryName = category
+
+  const image = getImage(data.allFile.nodes.find( (n) => n.name === categoryName).childrenImageSharp[0])
   return (
     <Link to={slug} itemProp="url">
       <div key={slug} className={styles.wrapper}>
