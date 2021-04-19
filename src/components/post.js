@@ -17,17 +17,13 @@ const Post = ({slug, title, date, tags, category}) => {
               quality: 95
             )
           }
-          relativeDirectory
           name
         }
       }
     }  
   `)
 
-  const image = getImage(data.allFile.nodes.find(n => n.name === category).childrenImageSharp[0])
-
-
-
+  const image = getImage(data.allFile.nodes.find( (n) => n.name === category).childrenImageSharp[0])
   return (
     <Link to={slug} itemProp="url">
       <div key={slug} className={styles.wrapper}>
