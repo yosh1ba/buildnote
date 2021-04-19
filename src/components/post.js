@@ -13,7 +13,7 @@ const Post = ({slug, title, date, tags, category}) => {
         nodes {
           childrenImageSharp {
             gatsbyImageData (
-              placeholder: BLURRED
+              placeholder: NONE
               formats: [AUTO, WEBP, AVIF]
               quality: 95
             )
