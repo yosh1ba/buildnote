@@ -10,7 +10,7 @@ const Post = ({slug, title, date, tags, category}) => {
     query{
       allFile(filter: {relativeDirectory: {eq: "eyecatch"}}) {
         nodes {
-          childrenImageSharp {
+          childImageSharp {
             gatsbyImageData (
               placeholder: NONE
               formats: [AUTO, WEBP, AVIF]
@@ -23,9 +23,9 @@ const Post = ({slug, title, date, tags, category}) => {
     }  
   `)
 
-  const categoryName = category
+  console.log(data)
 
-  const image = getImage(data.allFile.nodes.find( (n) => n.name === categoryName).childrenImageSharp[0])
+  const image = getImage(data.allFile.nodes.find( (n) => n.name === category).childImageSharp)
   return (
     <Link to={slug} itemProp="url">
       <div key={slug} className={styles.wrapper}>
