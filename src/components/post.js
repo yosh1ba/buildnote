@@ -24,7 +24,7 @@ const Post = ({slug, title, date, tags, category}) => {
     }  
   `)
 
-  const image = getImage(data.allFile.nodes.find(n => n.name === category)
+  const image = getImage(data.allFile.nodes.find(n => n.name === (category))
     .childrenImageSharp[0])
 
 
