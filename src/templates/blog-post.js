@@ -1,6 +1,5 @@
 import * as React from "react"
 import { Link, graphql } from "gatsby"
-import { StaticImage } from "gatsby-plugin-image"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
@@ -13,6 +12,7 @@ const BlogPostTemplate = ({ data, location }) => {
   const post = data.markdownRemark
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const { previous, next } = data
+  const eyecatch = data.allFile.nodes.find( file => file.name === post.frontmatter.category)?.publicURL
 
   return (
     <Layout location={location} title={siteTitle}>
@@ -27,14 +27,15 @@ const BlogPostTemplate = ({ data, location }) => {
       >
         <header>
           <div className={styles.eyecatch_wrapper}>
-          <StaticImage src="../images/eyecatch/dev.svg" />
+            <div className={styles.eyecatch_icon}>
+              <img
+                src={eyecatch}
+                width="100%" height="100%" alt="アイキャッチアイコン" />
+            </div>
           </div>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           <p>{post.frontmatter.date}</p>
-          <TagsList tags={post.frontmatter.tags} /> {/* aaa */}
-          {/* TODO:カテゴリはアイキャッチで判別する予定のため今は表示しない
-          <p>{post.frontmatter.category}</p>
-           */}
+          <TagsList tags={post.frontmatter.tags} />
         </header>
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
@@ -114,6 +115,12 @@ export const pageQuery = graphql`
       }
       frontmatter {
         title
+      }
+    }
+    allFile(filter: {relativeDirectory: {eq: "eyecatch"}}) {
+      nodes {
+        name
+        publicURL
       }
     }
   }
