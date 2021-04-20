@@ -7,3 +7,27 @@
   align-items: center;
   justify-content: center;
 }
+
+.eyecatch_icon{
+  width: 120px;
+  height: 120px;
+}
+
+@media (max-width: 42rem) {
+
+  h1 {
+    font-size: var(--fontSize-3);
+  }
+  h2 {
+    font-size: var(--fontSize-3);
+  }
+
+  .eyecatch_wrapper {
+    min-height: 120px;
+  }
+
+  .eyecatch_icon{
+    width: 80px;
+    height: 80px;
+  }
+}
