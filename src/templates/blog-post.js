@@ -4,7 +4,7 @@ import { StaticImage } from "gatsby-plugin-image"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import TagsList from "../components/tagsList"
 
 import * as styles from "./blog-post.module.scss"
@@ -16,7 +16,7 @@ const BlogPostTemplate = ({ data, location }) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO
+      <Seo
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
@@ -27,7 +27,7 @@ const BlogPostTemplate = ({ data, location }) => {
       >
         <header>
           <div className={styles.eyecatch_wrapper}>
-          <StaticImage src="../images/eyecatch/dev.png" />
+          <StaticImage src="../images/eyecatch/dev.svg" />
           </div>
           <h1 itemProp="headline">{post.frontmatter.title}</h1>
           <p>{post.frontmatter.date}</p>

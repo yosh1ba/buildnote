@@ -2,7 +2,7 @@ import * as React from "react"
 import { useStaticQuery, graphql } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
 
-import SNS from "../components/sns"
+import Sns from "../components/sns"
 
 const Bio = () => {
   const data = useStaticQuery(graphql`
@@ -46,7 +46,7 @@ const Bio = () => {
           <p>
             医療機関向けシステムのエンジニアをしています。
             フロントエンドが好きで、最近はJamstackに夢中です。
-            <SNS social={social} />
+            <Sns social={social} />
           </p>
         </div>
       )}

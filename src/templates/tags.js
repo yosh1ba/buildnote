@@ -3,7 +3,7 @@ import { graphql } from "gatsby"
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 import Post from "../components/post"
 
 const Tags = ({data, location, pageContext}) => {
@@ -17,7 +17,7 @@ const Tags = ({data, location, pageContext}) => {
 
   return (
     <Layout location={location} title={siteTitle}>
-      <SEO title={`「${tag}」タグが設定された記事一覧ページ`}  />
+      <Seo title={`「${tag}」タグが設定された記事一覧ページ`}  />
       <Bio />
       <h4>{tag}({count})</h4>
       <div>

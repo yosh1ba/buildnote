@@ -4,7 +4,7 @@ import kebabCase from 'lodash/kebabCase';
 
 import Bio from "../components/bio"
 import Layout from "../components/layout"
-import SEO from "../components/seo"
+import Seo from "../components/seo"
 
 const Tags = ({
   location,
@@ -16,7 +16,7 @@ const Tags = ({
   },
 }) => (
     <Layout location={location} title={title}>
-      <SEO title="タグ一覧ページ"  />
+      <Seo title="タグ一覧ページ"  />
       <Bio />
       <h4>タグ一覧</h4>
       <div>
