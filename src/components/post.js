@@ -16,14 +16,17 @@ const Post = ({slug, title, date, tags, category}) => {
     }  
   `)
 
-  const publicURL = data.allFile.nodes.find( (n) => n.name === category).publicURL
+  const eyecatch = data.allFile.nodes.find( file => file.name === category)?.publicURL
+
 
   return (
     <Link to={slug} itemProp="url">
       <div key={slug} className={styles.wrapper}>
         <div className={styles.eyecatch}>
           <div className={styles.eyecatchIcon}>
-            <img src={publicURL} width="60px" height="60px" alt="アイキャッチアイコン" />
+            <img 
+            src={eyecatch} 
+            width="100%" height="100%" alt="アイキャッチアイコン" />
           </div>
         </div>
         <div>
