@@ -6,7 +6,7 @@ module.exports = {
     },
     description: `日々の学びのアウトプット`,
     siteUrl: `https://buildnote.yosh1ba.com/`,
-    lang: 'ja', // TODO: これであってる？
+    lang: 'ja',
     locale: 'ja_JP',
     social: {
       twitter: `yoshiba718`,
@@ -53,12 +53,14 @@ module.exports = {
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
-    // {
-    //   resolve: `gatsby-plugin-google-analytics`,
-    //   options: {
-    //     trackingId: `ADD YOUR TRACKING ID HERE`,
-    //   },
-    // },
+    {
+      resolve: `gatsby-plugin-google-analytics`,
+      options: {
+        trackingId: process.env.GOOGLE_ANALYTICS_TRACKING_ID,
+        head: true,
+        respectDNT: true,
+      },
+    },
     {
       resolve: `gatsby-plugin-feed`,
       options: {
