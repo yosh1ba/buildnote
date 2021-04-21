@@ -125,16 +125,35 @@ module.exports = {
     },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-gatsby-cloud`,
-    // 2021-04-01 typography導入
-/*     {
-      resolve: `gatsby-plugin-typography`,
-      options: {
-        pathToConfigModule: 'src/utils/typography',
-      },
-    }, */
     `gatsby-plugin-sass`,
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    {
+      resolve: `gatsby-plugin-sitemap`,
+      options: {
+        output: `/sitemap.xml`,
+        createLinkInHead: true,
+        exclude: [`/category/`,`/category/*`, `/tags/`, `/tags/*`],
+        query: `
+          {
+            site {
+              siteMetadata {
+                siteUrl
+              }
+            }
+            allSitePage {
+              nodes {
+                path
+              }
+            }
+        }`,
+        serialize: ({ site, allSitePage }) =>
+          allSitePage.nodes.map(node => {
+            return {
+              url: `${site.siteMetadata.siteUrl}${node.path}`,
+              changefreq: `weekly`,
+              priority: 0.5,
+            }
+          })
+      }
+    },
   ],
 }
