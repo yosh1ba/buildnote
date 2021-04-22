@@ -10,9 +10,8 @@ const Tags = ({data, location, pageContext}) => {
   const siteTitle = data.site.siteMetadata?.title || `Title`
   const posts = data.allMarkdownRemark.nodes
 
-  // pageContextオブジェクトを変数に格納する
-  const tag = pageContext.tag // タグ名
-  const count = pageContext.count  // タグが設定された記事数
+  const tag = pageContext.tag
+  const count = pageContext.count
 
 
   return (
@@ -30,6 +29,7 @@ const Tags = ({data, location, pageContext}) => {
               title={title}
               date={post.frontmatter.date}
               tags={post.frontmatter.tags}
+              category={post.frontmatter.category}
             />
           )
         })}
@@ -58,6 +58,7 @@ export const pageQuery = graphql`
           date(formatString: "YYYY-MM-DD")
           title
           tags
+          category
         }
       }
     }
