@@ -1,7 +1,7 @@
 ---
 title: GatsbyJSでGoogle Fontsを使えるようにする
 date: 2021-04-23 18:04:11
-description: 
+description: "@fontsourceパッケージを使用し、セルフホスティング方式でGoogle Fontsを利用する。"
 tags: ['#GatsbyJS', '#Google Fonts']
 category: "dev"
 ---
