@@ -19,6 +19,7 @@ img {
 .eyecatch{
   width: 120px;
   height: 120px;
+  min-width: 120px;
   background-color: var(--color-background-thin);
   margin-right: var(--spacing-4);
   display: flex;
@@ -48,5 +49,6 @@ img {
   .eyecatch{
     width: 40px;
     height: 40px;
+    min-width: 40px;
   }
 }
