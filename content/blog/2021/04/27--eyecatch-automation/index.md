@@ -1,7 +1,7 @@
 ---
 title: GatsbyJSで記事のカテゴリに応じて自動でアイキャッチを設定する
 date: 2021-04-27 23:07:59
-description: 
+description: カテゴリと同じ名前でアイキャッチ用のアイコンを用意することで、簡単に実装できる。
 tags: ['#GatsbyJS']
 category: "dev"
 ---
