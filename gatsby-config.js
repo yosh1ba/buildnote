@@ -8,7 +8,7 @@ module.exports = {
       name: `yoshiba`,
     },
     description: `日々の学びのアウトプット`,
-    siteUrl: `https://buildnote.yosh1ba.com/`,
+    siteUrl: `https://yoshiba.dev/`,
     lang: 'ja',
     locale: 'ja_JP',
     social: {
