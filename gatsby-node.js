@@ -83,6 +83,13 @@ exports.createPages = async ({ graphql, actions, reporter }) => {
       })
     })
   }
+
+  const { createRedirect } = actions
+  createRedirect({ fromPath: 'http://buildnote.netlify.app/*', toPath: 'https://yoshiba.dev/:splat', isPermanent: true, force: true })
+  createRedirect({ fromPath: 'https://buildnote.netlify.app/*', toPath: 'https://yoshiba.dev/:splat', isPermanent: true, force: true })
+  createRedirect({ fromPath: 'http://yoshiba.dev/*', toPath: 'https://yoshiba.dev/:splat', isPermanent: true, force: true })
+  createRedirect({ fromPath: 'http://buildnote.yosh1ba.com/*', toPath: 'https://yoshiba.dev/:splat', isPermanent: true, force: true })
+  createRedirect({ fromPath: 'https://buildnote.yosh1ba.com/*', toPath: 'https://yoshiba.dev/:splat', isPermanent: true, force: true })
 }
 
 exports.onCreateNode = ({ node, actions, getNode }) => {
