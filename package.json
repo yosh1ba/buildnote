@@ -8,6 +8,7 @@
     "url": "https://github.com/gatsbyjs/gatsby/issues"
   },
   "dependencies": {
+    "@fontsource/noto-sans": "^4.4.0",
     "@fontsource/noto-sans-jp": "^4.2.2",
     "@fontsource/open-sans": "^4.2.2",
     "@fortawesome/fontawesome-svg-core": "^1.2.35",
