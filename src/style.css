@@ -107,8 +107,8 @@ h4,
 h5,
 h6 {
   font-family: var(--font-heading);
-  margin-top: var(--spacing-12);
   margin-bottom: var(--spacing-4);
+  margin-top: var(--spacing-10);
   line-height: var(--lineHeight-tight);
   letter-spacing: -0.025em;
 }
@@ -124,21 +124,21 @@ h6 {
 
 h1 {
   font-weight: var(--fontWeight-black);
-  font-size: var(--fontSize-6);
+  font-size: var(--fontSize-5);
   color: var(--color-heading-black);
 }
 
 h2 {
-  font-size: var(--fontSize-5);
+  font-size: var(--fontSize-3);
   border: none;
 }
 
 h3 {
-  font-size: var(--fontSize-4);
+  font-size: var(--fontSize-2);
 }
 
 h4 {
-  font-size: var(--fontSize-3);
+  font-size: var(--fontSize-2);
 }
 
 h5 {
@@ -185,7 +185,7 @@ ol {
 
 ul li,
 ol li {
-  padding-left: - var(--spacing-0);
+  padding-left: var(--spacing-4);
   margin-bottom: calc(var(--spacing-4) / 2);
 }
 
@@ -320,6 +320,9 @@ a:focus {
 
 }
 
+.blog-post header {
+  margin-bottom: var(--spacing-4);
+}
 
 .blog-post header h1 {
   margin: var(--spacing-0) var(--spacing-0) var(--spacing-4) var(--spacing-0);
