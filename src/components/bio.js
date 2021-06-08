@@ -1,6 +1,7 @@
 import * as React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import { useStaticQuery, graphql, Link } from "gatsby"
 import { StaticImage } from "gatsby-plugin-image"
+import { useLocation } from "@reach/router"
 
 import Sns from "../components/sns"
 
@@ -25,6 +26,18 @@ const Bio = () => {
   const author = data.site.siteMetadata?.author
   const social = data.site.siteMetadata?.social
 
+  const location = useLocation()
+  const rootPath = `${__PATH_PREFIX__}/`
+  const isRootPath = location.pathname === rootPath
+  let about
+
+  if (isRootPath){
+    about = (
+      <span>詳しくは<Link to="/about">こちら</Link>。</span>
+      
+    )
+  }
+
   return (
     <div className="bio">
       <div>
@@ -46,6 +59,7 @@ const Bio = () => {
           <p>
             医療機関向けシステムのエンジニアをしています。
             フロントエンドが好きで、最近はJamstackに夢中です。
+            {about}
             <Sns social={social} />
           </p>
         </div>
