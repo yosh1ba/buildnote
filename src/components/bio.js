@@ -34,7 +34,7 @@ const Bio = () => {
   if (isRootPath){
     about = (
       <span>当サイトについては<Link to="/about">こちら</Link>。</span>
-      
+
     )
   }
 
