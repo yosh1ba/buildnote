@@ -15,7 +15,7 @@ const About = ({data, location}) => {
       <Seo title="About" />
       <Bio />
       <article className={styles.language}>
-        <h2>このサイトについて</h2>
+        <h2>当サイトについて</h2>
         <p>業務でやったこと、プログラミング学習中の気づき、思ったことなど色々書いていきます。
           何かの拍子に誰かのお役に立てれば嬉しいです。
         </p>
@@ -25,10 +25,8 @@ const About = ({data, location}) => {
           <li>Netlify</li>
         </ul>
         <h3>クレジット</h3>
-        
         <div>Icons made by <a href="https://www.freepik.com" title="Freepik" target="blank">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon" target="blank">www.flaticon.com</a></div>
       </article>
-      
     </Layout>
   )
 }
