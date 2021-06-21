@@ -27,8 +27,7 @@ category: "poem"
 
 ## アウトプット
 qiita
-- [GatsbyJSでGoogleFontsを使いたい
-](https://qiita.com/yosh1ba/items/ef66524344af824ab6eb)
+- [GatsbyJSでGoogleFontsを使いたい](https://qiita.com/yosh1ba/items/ef66524344af824ab6eb)
 - [gatsby build 時の「WebpackError: TypeError: Cannot read property 'hoge' of undefined」対処法](https://qiita.com/yosh1ba/items/6c2299813dcc76d910d7)
 
 ブログ
