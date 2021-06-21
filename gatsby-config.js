@@ -56,6 +56,13 @@ module.exports = {
               wrapperStyle: `margin-bottom: 1.0725rem`,
             },
           },
+          {
+            resolve: `gatsby-remark-autolink-headers`,
+            options: {
+              icon: false,
+              maintainCase: false,
+            },
+          },
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
@@ -116,18 +123,18 @@ module.exports = {
         ],
       },
     },
-    {
-      resolve: `gatsby-plugin-manifest`,
-      options: {
-        name: `Gatsby Starter Blog`,
-        short_name: `GatsbyJS`,
-        start_url: `/`,
-        background_color: `#ffffff`,
-        theme_color: `#663399`,
-        display: `minimal-ui`,
-        icon: `content/assets/favicon.png`, // This path is relative to the root of the site.
-      },
-    },
+    // {
+    //   resolve: `gatsby-plugin-manifest`,
+    //   options: {
+    //     name: `Gatsby Starter Blog`,
+    //     short_name: `GatsbyJS`,
+    //     start_url: `/`,
+    //     background_color: `#ffffff`,
+    //     theme_color: `#663399`,
+    //     display: `minimal-ui`,
+    //     icon: `content/assets/favicon.png`, // This path is relative to the root of the site.
+    //   },
+    // },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-gatsby-cloud`,
     `gatsby-plugin-sass`,

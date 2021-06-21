@@ -13,6 +13,34 @@
   height: 120px;
 }
 
+.tableOfContents {
+  padding: var(--spacing-2) var(--spacing-4);
+  margin: var(--spacing-4) var(--spacing-0);
+  background: #fafafa;
+  border-top: solid 5px var(--color-text-light);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.22);
+
+  &:before {
+    content: "目次";
+    font-size: var(--fontSize-2);
+    font-weight: var(--fontWeight-bold);
+  }
+
+  ul li,
+  ol li {
+    margin-bottom: var(--spacing-0);
+  }
+
+  li > p {
+    margin-bottom: 0;
+  }
+
+  li > ul {
+    margin-top: 0;
+  }
+
+}
+
 @media (max-width: 42rem) {
 
   h1 {

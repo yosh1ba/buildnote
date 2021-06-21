@@ -37,6 +37,10 @@ const BlogPostTemplate = ({ data, location }) => {
           <p>{post.frontmatter.date}</p>
           <TagsList tags={post.frontmatter.tags} />
         </header>
+        <div
+          className={styles.tableOfContents}
+          dangerouslySetInnerHTML={{ __html: post.tableOfContents }}
+        />
         <section
           dangerouslySetInnerHTML={{ __html: post.html }}
           itemProp="articleBody"
@@ -93,6 +97,11 @@ export const pageQuery = graphql`
       id
       excerpt(pruneLength: 160)
       html
+      tableOfContents(
+        absolute: false
+        pathToSlugField: "frontmatter.path"
+        maxDepth: 3
+      )
       frontmatter {
         title
         date(formatString: "YYYY-MM-DD")
