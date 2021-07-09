@@ -5,6 +5,7 @@ import Bio from "../components/bio"
 import Layout from "../components/layout"
 import Seo from "../components/seo"
 import TagsList from "../components/tagsList"
+import Iframely from "../components/iframely"
 
 import * as styles from "./blog-post.module.scss"
 
@@ -20,6 +21,7 @@ const BlogPostTemplate = ({ data, location }) => {
         title={post.frontmatter.title}
         description={post.frontmatter.description || post.excerpt}
       />
+      <Iframely />
       <article
         className="blog-post"
         itemScope
