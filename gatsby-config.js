@@ -63,6 +63,7 @@ module.exports = {
               maintainCase: false,
             },
           },
+          'gatsby-remark-prismjs-title',
           `gatsby-remark-prismjs`,
           `gatsby-remark-copy-linked-files`,
           `gatsby-remark-smartypants`,
