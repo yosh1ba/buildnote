@@ -2,7 +2,7 @@
 title: "VSNotesでブログを書く"
 date: 2021-07-13 22:07:23
 description: "VSNotesを利用して快適な執筆環境を整える方法" 
-tags: ['#dev']
+tags: ['#開発環境']
 category: "dev"
 ---
 ## 当サイトの執筆環境
